@@ -6,6 +6,7 @@
 
 - The speaker discusses the motivational challenges in creating comprehensive content and encourages active **engagement** and **sharing** of the series to foster a learning community. Commitment to completing the series and interaction via comments is urged to enhance engagement, simulating a live classroom experience despite being a recorded series.
 
+- React -ReactDOM-- for websites and react native for mobile app
 ---
 
 ### Section 1: Why Learn React.js? Industry Demand and Misconceptions
