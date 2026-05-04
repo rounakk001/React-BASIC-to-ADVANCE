@@ -1,9 +1,15 @@
-
+import Chai from "./Chai"
 
 function App() {
+  let username="rounak"
   
   return (
-    <h1>Rounak with Vitereact</h1>
+    //isko fragments bolte hai wrap krta hai ye agar ek se jaada cheeze return kr rahe ho
+    <>    
+      <Chai />
+      <p>kya bhai kya haal hai ${username}</p>
+
+    </>
   )
 }
 
