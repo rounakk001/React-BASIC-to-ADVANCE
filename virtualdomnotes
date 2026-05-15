@@ -1,0 +1,20 @@
+Study from here:
+    https://github.com/acdlite/react-fiber-architecture
+
+Key Concepts Covered
+Virtual DOM & createRoot: The host explains that createRoot (3:13) initiates a tree-like structure in memory that mirrors the browser's DOM. This allows React to track UI updates efficiently.
+
+Reconciliation : This is the diffing algorithm used to compare the old tree with a new version. Instead of re-rendering the entire page—which is performance-heavy—React calculates the minimum number of operations required to update only the changed elements.
+
+React Fiber : Fiber is described as the core engine powering modern React. It enables incremental rendering by splitting work into manageable chunks. This allows React to:
+Pause or abort tasks when new, more urgent updates arrive.
+
+Assign priorities to different updates (e.g., handling animations vs. background data fetches) to ensure smooth user experiences.
+
+Why This Matters
+While many developers work at a higher level of abstraction, understanding the Fiber architecture and the diffing process is crucial for optimizing complex applications and mastering technical interviews. The host highlights that using keys in lists is vital for this algorithm to correctly identify elements during the reconciliation process.
+
+Note: The host emphasizes that while the term "Virtual DOM" is commonly used, modern React is defined by the Fiber reconciliation algorithm.
+
+
+

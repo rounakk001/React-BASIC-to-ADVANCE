@@ -11,16 +11,45 @@ React mein Hook kya hai? Yeh ek special function hai
  Hooks ka use class components likhe bina stateful logic add karne ke liye hota hai.
  */
 
+ /*
+// React state async hoti hai + batching hoti hai
+
+// Agar counter = 5 hai:
+setCounter(counter + 1); // 6
+setCounter(counter + 1); // 6
+setCounter(counter + 1); // 6
+setCounter(counter + 1); // 6
+
+// Final output sirf 6 hoga
+// Kyuki har call purani same value (5) use kar rahi hai
+
+
+// Correct way: Functional update
+setCounter(prev => prev + 1); // 5 -> 6
+setCounter(prev => prev + 1); // 6 -> 7
+setCounter(prev => prev + 1); // 7 -> 8
+setCounter(prev => prev + 1); // 8 -> 9
+
+// Final output = 9
+
+
+// Yaad rakh:
+// setCounter(counter + 1)  -> stale/same old value use karta hai
+// setCounter(prev => prev + 1) -> latest updated value use karta hai
+*/
+
+
 function App() {
   //basically counter value hold kr raha and setcounter ek method hai jo counter ki value change kr raha  
-  let [counter,setcounter]=useState(10);   //use state tb use krte hai jb koi value change krni ho aur UI ko update krna ho
+  const [counter,setcounter]=useState(10);   //use state tb use krte hai jb koi value change krni ho aur UI ko update krna ho
   
   const addValue=() => {
     console.log(counter);
     //setcounter basically counter ki value change kr ke ui ke saath sync kr raha hai
 
-    if(counter<20)
+    if(counter<200)
     setcounter(counter+1);
+  
    
   }
 
